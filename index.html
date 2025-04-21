@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cocktail Quiz</title>
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="start-screen" class="screen">
+      <h1>Cocktail Quiz <i class="fas fa-cocktail"></i></h1>
+      <p>Test your knowledge about cocktails, ingredients, and more!</p>
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <div id="loading-indicator" class="screen hidden">
+      <div class="spinner"></div>
+      <p>Mixing your questions...</p>
+    </div>
+
+    <div id="quiz-screen" class="screen hidden">
+      <div class="progress-bar-container">
+        <progress id="progress-bar" value="0" max="10"></progress>
+      </div>
+      <h2 id="question">Question goes here</h2>
+      <div class="cocktail-image-container">
+        <img id="cocktail-image" src="" alt="Cocktail Image" />
+      </div>
+      <div id="answers" class="answers-container"></div>
+      <div id="feedback" class="feedback hidden">
+        <p id="feedback-text"></p>
+        <button id="next-btn" class="btn">Next Question</button>
+      </div>
+    </div>
+
+    <div id="results-screen" class="screen hidden">
+      <h2>Quiz Complete!</h2>
+      <p>Your Score: <span id="score">0</span> out of <span id="total-questions">0</span></p>
+      <div id="wrong-answers" class="wrong-answers"></div>
+      <button id="restart-btn" class="btn">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      console.log("HTML Loaded");
+    });
+  </script>
+
+  <script src="./index.js"></script>
+</body>
+</html>
